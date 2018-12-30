@@ -24,6 +24,7 @@ dependencies:
 - mtl
 - algebraic-graphs
 - unix
+- stm
 
 library:
   source-dirs: lib
