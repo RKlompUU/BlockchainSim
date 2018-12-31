@@ -25,6 +25,7 @@ dependencies:
 - algebraic-graphs
 - unix
 - stm
+- process
 
 library:
   source-dirs: lib

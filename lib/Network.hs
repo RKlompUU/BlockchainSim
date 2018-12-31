@@ -29,6 +29,9 @@ simNetwork numRoots numNeighbours = do
     for [1..10] $ \i -> do
       liftIO $ threadDelay (1000 * 1000)
       liftIO $ putStrLn $ "Tick " ++ show i ++ ".."
+      if i == 5
+        then liftIO $ atomically $ writeTChan admin EvPrintNetwork
+        else return ()
     return ()
 
 bootstrapStatics :: NtwrkState ()

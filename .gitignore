@@ -2,3 +2,5 @@
 BlockchainSim.cabal
 *~
 *.swp
+*.dot
+.network.svg

@@ -1,11 +1,10 @@
 module Types where
 
 
+import Control.Monad.State
 import Control.Concurrent.STM.TChan
 
 import Algebra.Graph as G
-
-import Control.Monad.State
 
 data Network =
   Network {
@@ -49,6 +48,7 @@ data Ev =
     EvNewNode Int
   | EvNewConn Int Int
   | EvPeerMsgRcv Int PeerMsg
+  | EvPrintNetwork
   deriving Show
 
 data ConnEstab =
